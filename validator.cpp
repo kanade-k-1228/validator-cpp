@@ -3,6 +3,7 @@
 #include <iostream>
 #include <regex>
 
+namespace Valid {
 CondItem::CondItem(std::string cond) {
   for(int i = 0; i < cond.size(); ++i) {
     if(cond.at(i) == ':') {
@@ -84,3 +85,4 @@ std::string Condition::print() {
   ss << "\b \b]";
   return ss.str();
 }
+}  // namespace Valid

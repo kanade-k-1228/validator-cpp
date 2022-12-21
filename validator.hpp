@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+namespace Valid {
 struct CondItem {
   enum Type {
     NUM,
@@ -25,3 +26,4 @@ public:
   std::optional<int> match(std::string value);
   std::string print();
 };
+}  // namespace Valid

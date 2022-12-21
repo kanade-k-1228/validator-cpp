@@ -3,7 +3,7 @@
 #include <iostream>
 
 int main(int argc, char* argv[]) {
-  Condition cond(argv[1]);
+  Valid::Condition cond(argv[1]);
   auto result = cond.match(argv[2]);
 
   std::cout

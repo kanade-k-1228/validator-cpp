@@ -19,14 +19,17 @@ enum  ::= num '=' ident
 ## 使い方
 
 ```cpp:
-Validatar(std::string condition)
-std::optional<int> match(std::string value)
+Valid::Condition cond("[0=NULL,0:4,5,7,11,13]");
+cond.match("NULL"); // = 0
+cond.match("10");   // = std::nullopt
 ```
 
 ```cpp:
-Validator cond("[0=NULL,0:4,5,7,11,13]");
-cond.match("NULL"); // > 0
-cond.match("10");   // > std::nullopt
+namespace Valid{
+Conditon(std::string condition);
+std::optional<int> Condition::match(std::string value);
+std::string Condition::print();
+}
 ```
 
 ## TODO
